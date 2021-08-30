@@ -1,0 +1,48 @@
+" plugins from vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+call plug#end()
+
+" set moving between windows to ctrl+hjkl
+noremap <silent> <C-l> <c-w>l
+noremap <silent> <C-h> <c-w>h
+noremap <silent> <C-k> <c-w>k
+noremap <silent> <C-j> <c-w>j
+
+" Indents 
+set autoindent
+set expandtab 
+set shiftround 
+set shiftwidth=4
+set smarttab 
+set tabstop=4
+
+" Search 
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase 
+
+" Perfomance 
+set display+=lastline
+set encoding=utf-8
+set linebreak
+set scrolloff=1
+set sidescrolloff=5 
+set wrap 
+
+" Text Rendering 
+set ruler
+set wildmenu
+set tabpagemax=50
+set number
+set noerrorbells
+set mouse=a
+set title 
+set background=dark
+
