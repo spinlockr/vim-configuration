@@ -1,10 +1,21 @@
+
+" :PlugInstall
+
 " plugins from vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdtree'
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"let g:airline_theme='onedark'
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#whitespace#enabled = 0
+
+Plug 'joshdick/onedark.vim'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
@@ -13,6 +24,13 @@ noremap <silent> <C-l> <c-w>l
 noremap <silent> <C-h> <c-w>h
 noremap <silent> <C-k> <c-w>k
 noremap <silent> <C-j> <c-w>j
+
+set rtp+=~/home/matthew/tabnine-nine
+
+colorscheme onedark
+
+set modifiable 
+set splitbelow
 
 " Indents 
 set autoindent
@@ -45,4 +63,3 @@ set noerrorbells
 set mouse=a
 set title 
 set background=dark
-
