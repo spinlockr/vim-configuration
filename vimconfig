@@ -1,23 +1,26 @@
+" After editing new plugins use :PlugInstall
+" Plugins from vim-plug, installed with curl inside .vim folder
+" Edit vim configuration from inside the .vimrc file at home directory
 
-" :PlugInstall
-
-" plugins from vim-plug
 call plug#begin('~/.vim/plugged')
 
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"let g:airline_theme='onedark'
-"let g:airline_powerline_fonts = 1
-"let g:airline#extensions#whitespace#enabled = 0
-
-Plug 'joshdick/onedark.vim'
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-Plug 'vim-scripts/AutoComplPop'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    let g:airline_theme='onedark'
+    "let g:airline_powerline_fonts = 1'
+    "let g:airline#extensions#whitespace#enabled = 0'
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
+
+" setting
+color dracula
+set modifiable 
+set splitbelow
+set clipboard=unnamedplus
 
 " set moving between windows to ctrl+hjkl
 noremap <silent> <C-l> <c-w>l
@@ -25,14 +28,7 @@ noremap <silent> <C-h> <c-w>h
 noremap <silent> <C-k> <c-w>k
 noremap <silent> <C-j> <c-w>j
 
-set rtp+=~/home/matthew/tabnine-nine
-
-colorscheme onedark
-
-set modifiable 
-set splitbelow
-
-" Indents 
+" indents 
 set autoindent
 set expandtab 
 set shiftround 
@@ -40,13 +36,13 @@ set shiftwidth=4
 set smarttab 
 set tabstop=4
 
-" Search 
+" search 
 set hlsearch
 set ignorecase
 set incsearch
 set smartcase 
 
-" Perfomance 
+" perfomance 
 set display+=lastline
 set encoding=utf-8
 set linebreak
@@ -54,7 +50,7 @@ set scrolloff=1
 set sidescrolloff=5 
 set wrap 
 
-" Text Rendering 
+" text rendering 
 set ruler
 set wildmenu
 set tabpagemax=50
